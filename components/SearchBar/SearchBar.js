@@ -12,6 +12,8 @@ export class SearchBar extends Component {
   searchButtonClick = () => this.props.onPressSearch(this.state.inputValue);
 
   render() {
+    const { isLoading } = this.props;
+
     return (
       <View style={{ flex: 1, backgroundColor: "#ddd" }}>
         <View style={styles.searchContainer}>
@@ -22,7 +24,7 @@ export class SearchBar extends Component {
           />
           <Button
             buttonStyle={styles.searchButton}
-            title="Search"
+            title={isLoading ? "Loading..." : "Search"}
             onPress={this.searchButtonClick}
           />
         </View>
