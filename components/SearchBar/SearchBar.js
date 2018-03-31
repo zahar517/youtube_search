@@ -15,19 +15,17 @@ export class SearchBar extends Component {
     const { isLoading } = this.props;
 
     return (
-      <View style={{ flex: 1, backgroundColor: "#ddd" }}>
-        <View style={styles.searchContainer}>
-          <TextInput
-            style={styles.searchInput}
-            value={this.state.inputValue}
-            onChangeText={this.searchInputChange}
-          />
-          <Button
-            buttonStyle={styles.searchButton}
-            title={isLoading ? "Loading..." : "Search"}
-            onPress={this.searchButtonClick}
-          />
-        </View>
+      <View style={styles.searchContainer}>
+        <TextInput
+          style={styles.searchInput}
+          value={this.state.inputValue}
+          onChangeText={this.searchInputChange}
+        />
+        <Button
+          buttonStyle={styles.searchButton}
+          title={isLoading ? "Loading..." : "Search"}
+          onPress={this.searchButtonClick}
+        />
       </View>
     );
   }
@@ -38,6 +36,7 @@ const styles = {
     flexDirection: "row",
     marginTop: 20,
     marginLeft: 20,
+    marginBottom: 20,
   },
   searchInput: {
     flex: 1,
