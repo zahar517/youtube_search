@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
+import WatchButton from "../WatchButton";
 
 export const VideoListItem = ({ video }) => (
     <View style={styles.container}>
@@ -8,6 +9,7 @@ export const VideoListItem = ({ video }) => (
             style={styles.imageStyle}
         />
         <Text style={styles.textStyle}>{video.snippet.title}</Text>
+        <WatchButton videoId={video.id.videoId} />
     </View>
 );
 
